@@ -16,20 +16,20 @@ exit 0
 fi
 mkdir /var/lib/premium-script;
 echo "IP=" >> /var/lib/premium-script/ipvps.conf
-wget -q https://raw.githubusercontent.com/egirahmadi/egi/cfraisa.sh && chmod +x cfraisa.sh && ./cfraisa.sh
+wget -q https://raw.githubusercontent.com/geonoky/geoaja/main/cf.sh && chmod +x cf.sh && ./cf.sh
 #install ssh ovpn
-wget -q https://raw.githubusercontent.com/egirahmadi/egi/ssh-vpn.sh && chmod +x ssh-vpn.sh && screen -S ssh-vpn ./ssh-vpn.sh
-wget -q https://raw.githubusercontent.com/egirahmadi/air/main/sstp.sh && chmod +x sstp.sh && screen -S sstp ./sstp.sh
+wget -q https://raw.githubusercontent.com/geonoky/geoaja/main/ssh-vpn.sh && chmod +x ssh-vpn.sh && screen -S ssh-vpn ./ssh-vpn.sh
+wget -q https://raw.githubusercontent.com/geonoky/geoaja/main/sstp.sh && chmod +x sstp.sh && screen -S sstp ./sstp.sh
 #install ssr
-wget -q https://raw.githubusercontent.com/egirahmadi/air/main/ssr.sh && chmod +x ssr.sh && screen -S ssr ./ssr.sh
-wget -q https://raw.githubusercontent.com/egirahmadi/air/main/sodosok.sh && chmod +x sodosok.sh && screen -S ss ./sodosok.sh
+wget -q https://raw.githubusercontent.com/geonoky/geoaja/main/ssr.sh && chmod +x ssr.sh && screen -S ssr ./ssr.sh
+wget -q https://raw.githubusercontent.com/geonoky/geoaja/main/sodosok.sh && chmod +x sodosok.sh && screen -S ss ./sodosok.sh
 #installwg
-wget -q https://raw.githubusercontent.com/egirahmadi/air/main/wg.sh && chmod +x wg.sh && screen -S wg ./wg.sh
+wget -q https://raw.githubusercontent.com/geonoky/geoaja/main/wg.sh && chmod +x wg.sh && screen -S wg ./wg.sh
 #install v2ray
-wget -q https://raw.githubusercontent.com/egirahmadi/air/main/ins-vt.sh && chmod +x ins-vt.sh && screen -S v2ray ./ins-vt.sh
+wget -q https://raw.githubusercontent.com/geonoky/geoaja/main/ins-vt.sh && chmod +x ins-vt.sh && screen -S v2ray ./ins-vt.sh
 #install L2TP
-wget -q https://raw.githubusercontent.com/egirahmadi/air/main/ipsec.sh && chmod +x ipsec.sh && screen -S ipsec ./ipsec.sh
-wget -q https://raw.githubusercontent.com/egirahmadi/air/main/set-br.sh && chmod +x set-br.sh && ./set-br.sh
+wget -q https://raw.githubusercontent.com/geonoky/geoaja/main/ipsec.sh && chmod +x ipsec.sh && screen -S ipsec ./ipsec.sh
+wget -q https://raw.githubusercontent.com/geonoky/geoaja/main/set-br.sh && chmod +x set-br.sh && ./set-br.sh
 
 rm -f /root/ssh-vpn.sh
 rm -f /root/sstp.sh
@@ -54,7 +54,7 @@ WantedBy=multi-user.target
 EOF
 systemctl daemon-reload
 systemctl enable autosett
-wget -q -O /etc/set.sh "https://raw.githubusercontent.com/egirahmadi/air/main/set.sh"
+wget -q -O /etc/set.sh "https://raw.githubusercontent.com/geonoky/geoaja/main/set.sh"
 chmod +x /etc/set.sh
 history -c && history -w
 echo "1.2" > /home/ver
